@@ -8,6 +8,11 @@ import Dashboard from "./pages/adminpages/Dashboard";
 import AdminHeader from "./components/admincomponents/AdminHeader";
 import Addproduct from "./pages/adminpages/Addproduct";
 import ProductList from "./pages/adminpages/ProductList";
+import Register from "./pages/userpages/Register";
+import Signinpage from "./pages/userpages/Signinpage";
+import CartPage from "./components/usercomponents/CartPage";
+import AddCategory from "./pages/adminpages/AddCategory";
+import CategoryList from "./pages/adminpages/CategoryList";
 
 const Myroutes = () => {
   return (
@@ -19,6 +24,9 @@ const Myroutes = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<Homepage />} />
             <Route path="product" element={<Product />} />
+            <Route path="register" element={<Register/>}/>
+            <Route path="login" element={<Signinpage/>}/>
+            <Route path='/cart' element={<CartPage/>}/>
           </Route>
 
                {/* route for admin pages */}
@@ -26,6 +34,10 @@ const Myroutes = () => {
             <Route index element={<Dashboard />} />
             <Route path="addproduct" element={<Addproduct/>}/>
             <Route path="productlist" element={<ProductList/>}/>
+            <Route path="addcategory" element={<AddCategory/>}/>
+            <Route path="categorylist" element={<CategoryList/>}/>
+            
+
          
           </Route>
         </Routes>
